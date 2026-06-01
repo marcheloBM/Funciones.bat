@@ -1,0 +1,6 @@
+en registro del sistema (regedit) buscamos
+	Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+clave de AMDFX
+VK7JG-NPHTM-C97JM-9MPGT-3V66T
+
+Clave de Asus

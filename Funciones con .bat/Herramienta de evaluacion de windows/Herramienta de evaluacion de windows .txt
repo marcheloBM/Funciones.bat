@@ -1,0 +1,5 @@
+#para evaluar nuectro equipo por CMD
+winsat formal
+
+#para ver el informe final desde powershell
+get-ciminstance win32_winsat

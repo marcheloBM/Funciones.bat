@@ -1,0 +1,5 @@
+desde cmd como administrador 
+#para exportarlos a un archivo .json
+winget export -o E:\mis_programas.json
+#para instalar los programas 
+winget import "E:\mis_programas.json"
