@@ -15,6 +15,9 @@ Incluye utilidades para respaldo, limpieza, reparación y evaluación del sistem
 - 📊 **Herramienta de evaluación de Windows** → Ejecuta `winsat` para medir rendimiento.
 - 🧹 **Limpiar v1 y v2** → Scripts de limpieza de archivos temporales y caché.
 - 🛠️ **RepararSistema** → Corrección de errores comunes en Windows.
+- ⚡ **SSD** → Optimización de discos (TRIM, desactivar Indexado, Superfetch, Prefetch, ClearPageFileAtShutdown, activar caché de escritura).
+- 🧠 **Memoria Virtual** → Activar, desactivar o mover el archivo de paginación según la RAM instalada.
+
 
 ---
 
