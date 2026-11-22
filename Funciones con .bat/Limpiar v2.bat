@@ -1,5 +1,7 @@
 @echo off
 setlocal
+::Color de fondo y texto
+color 17
 
 :: Relanzar con prioridad alta
 if "%~1"=="" (
@@ -89,19 +91,15 @@ del /f /s /q "%userprofile%\AppData\Local\Microsoft\Windows\Explorer\thumbcache_
 call :log "Eliminando volcados de memoria..."
 del /f /s /q "%SystemRoot%\MEMORY.DMP" >> "%LOGFILE%" 2>&1
 
-:: 10. Flush DNS
-call :log "Vaciando caché DNS..."
-ipconfig /flushdns >> "%LOGFILE%" 2>&1
-
-:: 11. Reportes de errores (WER)
+:: 10. Reportes de errores (WER)
 call :log "Eliminando reportes de errores (WER)..."
 rd /s /q "%ProgramData%\Microsoft\Windows\WER" >> "%LOGFILE%" 2>&1
 
-:: 12. Caché de drivers
+:: 11. Caché de drivers
 call :log "Eliminando caché de drivers..."
 rd /s /q "%SystemRoot%\System32\DriverStore\FileRepository" >> "%LOGFILE%" 2>&1
 
-:: 13. Liberador de espacio en disco (requiere configuración previa)
+:: 12. Liberador de espacio en disco (requiere configuración previa)
 call :log "Ejecutando Liberador de espacio en disco..."
 cleanmgr /sagerun:1 >> "%LOGFILE%" 2>&1
 
@@ -139,7 +137,7 @@ echo ================================
 echo   RESUMEN DE LIMPIEZA Y DIAGNOSTICO
 echo ================================
 echo - Limpieza de temporales, Prefetch y logs
-echo - Vaciado de papelera y DNS
+echo - Vaciado de papelera
 echo - Eliminación de volcados y reportes WER
 echo - Caché de navegadores (Chrome, Edge, Firefox, Brave, Opera, Vivaldi)
 echo - Caché de drivers y Windows Update
